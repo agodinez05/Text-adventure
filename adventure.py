@@ -1,3 +1,7 @@
+#Athenea Godinez + Cecilia Wilson 
+#Maze Runner Program
+#Data.PYT
+#Have fun!
 def start():
     #give some prompts
     print("It is dark and you are in a rattling box, moving upward. As you approach the light you see a group of people crowding around you. You see the maze. Tall walls of rock.")
