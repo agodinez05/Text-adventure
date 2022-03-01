@@ -58,9 +58,9 @@ def griever_two():
         the_glade()
 
 #the glade
-def the_glade():
+def the_center():
     #some prompts
-    print("You have escaped the griever and are now at the Glade")
+    print("You have escaped the griever and are now at the center of the maze.")
     print("Continue forward and look for the door")
     print("Where will you go now?")
     print("1.Right 2. Forward")
