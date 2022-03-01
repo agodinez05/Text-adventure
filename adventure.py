@@ -1,3 +1,22 @@
+def start():
+    #give some prompts
+    print("It is dark and you are in a rattling box, moving upward. As you approach the light you see a group of people crowding around you. You see the maze. Tall walls of rock.")
+    print("Now you must lead the group to safety but be careful of the grievers, flesh eating robots. AND USE THE NUMBER FOR YOUR ANSWER, DONT WRITE IT!")
+    print("Which way will you turn first? Right or Left?")
+    
+    #convert the player's input() to lower_case
+    answer = input(">").lower()
+
+    if "r" in answer:
+        #if player typed "right" or "r" lead him to griever_one()
+        griever_one()
+    elif "l" in answer:
+        #else if player typed "left" or "l" lead him to griever_two()
+        griever_two()
+    else:
+        #else call game_over() function with the "reason" argument
+        game_over("don't you know how to type something properly?")
+        
 #griever one
 def griever_one():
     #give some prompts
@@ -27,10 +46,10 @@ def griever_two():
     #take input()
     answer = input(">")
 
-    if answer=="1":
+    if answer=="1" or "fight it":
         #call game_over() function with the "reason" argument
         game_over("no bro, what?! you can't take a griever. You're done.")
-    elif answer=="2":
+    elif answer=="2" or "run away":
         #lead player to The Glade
         the_glade()
 
@@ -49,8 +68,40 @@ def the_glade():
         #the player is dead, call game_over()
         game_over("do you not listen to basic instructions")
     elif answer=="2":
-        #player moves on to door
+        #player moves on to searching for the code/key
+        searching_for_key()
+
+#searching for the key/code for escape
+def searching_for_key():
+    #some prompts
+    print("You are so close now but you need to find the key/code.")
+    print("To find the key you need to do some simple math")
+    print("What is 2+4")
+
+    #take input()
+    answer = input(">")
+
+    if answer=="6":
+        #the player moves on to the door()
         door()
+    else:
+        #player is dead
+        game_over("you need to go back to lower school with those math skills.")
+
+    #second part of key - prompts
+    print ("Uh oh, you need one more number.")
+    print ("What is 5x5?")
+
+    #take input()
+    answer = input(">")
+
+    if answer=="25":
+        #the player moves on to the door()
+        door()
+    else:
+        #player is dead
+        game_over("you need to go back to lower school with those math skills.")
+    
 
 #the door/freedom
 def door():
@@ -69,12 +120,31 @@ def door():
         #player is dead/wrong choice, call game_over()
         game_over("Wrong! He's awesome so I understand but no")
     elif answer=="3":
-        #player won the game
+        #player escaped maze
         print("YAY! ALWAYS TRUST MINHO! HE'S THE BEST")
-        print("YOu have escaped the maze! Until next time <3")
-        #activate play_again() function
-        play_again()
+        print("You have escaped the maze!")
+        #activate last_scene() function
+        last_scene()
 
+#past the door/last scene
+def last_scene():
+    #some prompts
+    print("You are in the griever HQ")
+    print("You and the group are walking through a dark hallway and you reach a door. You open it and see a screen that's playing a video of a blonde woman. What do you do?")
+    print("1. Smash the screen 2. Keep watching")
+    
+    #take input()
+    answer = input(">")
+
+    if answer=="1":
+        #player is dead
+        game_over("Oh no! The room is on fire, you killed everyone. Good job!")
+    if answer=="2":
+        #player lives and discovers new information
+        print("Oh no! There is DEADLY disease and you are the key to everyone's survival. Be careful out there.")
+        print("To be continued...")
+        play_again()
+    
 #game_over function accepts argument called "reason"
 def game_over(reason):
     #print the "reason" in line
@@ -98,32 +168,7 @@ def play_again():
         exit()
 
 
-def start():
-    #give some prompts
-    print("It is dark and you are in a rattling box, moving upward. As you approach the light you see a group of people crowding around you. You see the maze. Tall walls of rock.")
-    print("Now you must lead the group to safety but be careful of the grievers, flesh eating robots.")
-    print("Which way will you turn first? Right or Left?")
-    
-    #convert the player's input() to lower_case
-    answer = input(">").lower()
-
-    if "r" in answer:
-        #if player typed "right" or "r" lead him to griever_one()
-        griever_one()
-    elif "l" in answer:
-        #else if player typed "left" or "l" lead him to griever_two()
-        griever_two()
-    else:
-        #else call game_over() function with the "reason" argument
-        game_over("don't you know how to type something properly?")
-
 #start the game
 start()
-
-
-
-
-
-       
 
 
