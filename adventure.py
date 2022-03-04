@@ -3,8 +3,11 @@
 #Data.PYT
 #Have fun!
 def start():
+    #Data script
+    import Data
+    print(Data.start())
+    print(Data.attack())
     #give some prompts
-    print("It is dark and you are in a rattling box, moving upward. As you approach the light you see a group of people crowding around you. You see the maze. Tall walls of rock.")
     print("Now you must lead the group to safety but be careful of the grievers, flesh eating robots. AND USE THE NUMBER FOR YOUR ANSWER, DONT WRITE IT!")
     print("Which way will you turn first? Right or Left?")
     
