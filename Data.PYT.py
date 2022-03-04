@@ -3,7 +3,8 @@ def start():
     #give some prompts
     print("It is dark and you are in a rattling box, moving upward. As you approach the light you see a group of people crowding around you. You see the maze. Tall walls of rock.")
     print("You are in the Glade. Time to get adjusted. What job will you choose? AND USE THE NUMBER FOR YOUR ANSWER, DONT WRITE IT!")
-    list=[1,2,3]
+    list=["1,farmer","2,cook","3,builder"]
+    print(list)
    
     #convert the player's input() to lower_case
     answer = input(">").lower()
@@ -19,6 +20,7 @@ def attack():
         #background prompts
     print("You are in the woods shortly after your arrival. One of the other Glade members attacks you. What do you do?")
     list=["1,fight back","2, run"]
+    print(list)
 
     #take input()
     answer = input(">")
